@@ -1,0 +1,27 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 20px;
+    border-bottom: solid 2px var(--gris-claro);
+    
+}
+
+.logo {
+    color: var(--negro);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menuLink {
+    color: var(--gris);
+}
+
+.menuLink:hover {
+    color: var(--negro);
+}

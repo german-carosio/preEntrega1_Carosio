@@ -1,0 +1,62 @@
+programacion funcional con React
+
+webpack -> proceso de empaquetado (rollups.js)
+
+npm run build -> carpeta dist
+
+
+
+/* spread operator */
+const num1 = [1,2,3,4];
+const num2 = [...num1,5];
+
+
+console.log(num1);
+console.log(num2);
+
+const persona1 = {
+    nombre: 'German',
+    edad: 37,
+    pais: 'Argentina'
+
+} 
+
+const persona2 = {
+    ...persona1,
+    nombre: 'Pepe'
+}
+
+
+console.log(persona1);
+console.log(persona2);
+
+/* Desestructuracion */
+
+const {nombre} = persona1;
+const {nombre: nombrePersona2} = persona2;
+const {edad, ...rest} = persona1;
+
+console.log(nombre);
+console.log(nombrePersona2);
+console.log(rest);
+
+const edades = [22, 25, 30, 45];
+const [juan, jose, pedro, raul] = edades;
+
+console.log(juan);
+
+//polyfiils
+
+Number.prototype.multiplicar = function (num) {
+    return this * num;
+}
+
+num1= 5;
+num2 = 10;
+
+console.log(num1.multiplicar(num2));
+
+----------------------------------------------------------------
+
+2- las props son objetos que tienen datos, estos datos se pasan de padres a hijos
+
