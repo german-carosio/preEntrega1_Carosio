@@ -10,7 +10,7 @@ function App() {
     <>  
       <div className='cuelpo'>
       <NavBar />
-      <ItemListContainer greeting={'Bienvenidos'} />
+      <ItemListContainer greeting={'Productos Selecionados'} />
       <ItemCount initial={1} stock={10} consola={(cantidad)=> console.log('Cantidad agregada:', cantidad)}  />
       </div>              
     </>
