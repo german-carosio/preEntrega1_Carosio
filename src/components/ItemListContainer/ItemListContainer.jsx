@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import estilos from './ItemListContainer.module.css'
 import { Item } from '../Item/Item'
+import {getProducts} from '../../AsyncMock'
+import { ItemList } from '../ItemList/ItemList'
 
-export const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = ({titulo}) => {
+
+  const [products, setProduts] = useState([])
+
+  useEffect(() => {
+    getProducts()
+    .then(response => {
+      setProduts(response)
+    })
+    .catch(error => {
+      console.error(error)
+    })
+  }, [])
+
   return (
     <div className={estilos.container}>
-        <h2>{greeting}</h2>
+        <h2>{titulo}</h2>
         <div className={estilos.articulos}>
-        <Item name={'Producto 1'} img={'https://www.liliana.com.ar/wp-content/uploads/2023/08/VP20P_web_01.jpg'} />
-        <Item name={'Producto 2'} img={'https://www.liliana.com.ar/wp-content/uploads/2022/08/VTHD10R_web_01-1.jpg'} />
-        <Item name={'Producto 3'} img={'https://www.liliana.com.ar/wp-content/uploads/2022/08/VPHD16G_web_01.jpg'}/>
+        <ItemList products={products}  />
         </div>
         
     </div>

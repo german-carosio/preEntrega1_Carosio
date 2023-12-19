@@ -8,9 +8,9 @@ function App() {
 
   return (
     <>  
-      <div className='cuelpo'>
+      <div className='cuerpo'>
       <NavBar />
-      <ItemListContainer greeting={'Productos Selecionados'} />
+      <ItemListContainer titulo={'Productos:'} />
       <ItemCount initial={1} stock={10} consola={(cantidad)=> console.log('Cantidad agregada:', cantidad)}  />
       </div>              
     </>
